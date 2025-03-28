@@ -34,7 +34,7 @@ public class MyApplication {
             switch (option){
                 case 1 -> findMin();
                 case 2 -> findAverage();
-
+                case 3 -> checkNumber();
 
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
@@ -62,8 +62,15 @@ public class MyApplication {
             arr[i] = sc.nextInt();
         }
 
+        double startTime = System.nanoTime();
+
         int task_1 = task.findMinimum(arr);
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+
         System.out.println("The minimum element in the array is  " + task_1);
+        System.out.println("the duration is " + duration + " milliseconds");
 
     }
 
@@ -79,10 +86,36 @@ public class MyApplication {
             arr[i] = sc.nextInt();
         }
 
+        double startTime = System.nanoTime();
+
         double task_2 = task.average(arr);
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+
         System.out.println("The average is " + task_2);
+        System.out.println("the duration is " + duration + " milliseconds");
 
     }
+
+    private void checkNumber(){
+        System.out.println("enter a number");
+        int n = sc.nextInt();
+
+
+        double startTime = System.nanoTime();
+
+        String res = task.isPrime(n) ? "Prime" : "Composite";
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+
+        System.out.println(res + " number");
+        System.out.println("the duration is " + duration + " milliseconds");
+
+    }
+
+
 
 
 
