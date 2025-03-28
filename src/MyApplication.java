@@ -36,6 +36,7 @@ public class MyApplication {
                 case 2 -> findAverage();
                 case 3 -> checkNumber();
                 case 4 -> Factorial();
+                case 5 -> fibonacciSequence();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -129,6 +130,24 @@ public class MyApplication {
 
         System.out.println("factorial of  " + n   + "  is  " + result);
         System.out.println("the duration is " + duration + " milliseconds");
+
+    }
+
+    private void fibonacciSequence(){
+
+        System.out.println("enter the number for find Fibonacci number");
+        int n = sc.nextInt();
+
+        double startTime = System.nanoTime();
+
+        //hold result
+        int result = task.fibonacci(n);
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+        System.out.println("the result is " + result);
+        System.out.println("the duration is " + duration + " milliseconds");
+
 
     }
 

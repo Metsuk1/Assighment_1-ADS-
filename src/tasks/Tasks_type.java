@@ -71,10 +71,23 @@ public class Tasks_type {
      * @param n the number for which the factorial is to be calculated
      * @return  The factorial of the given number
      */
-    public static int factorial(int n) {
+    public  int factorial(int n) {
         if( n == 0|| n == 1) return 1;
 
         return n * factorial(n-1);
+    }
+
+    /**
+     * this method for find n-th elements in Fibonacci sequence using recursion
+     *  time complexity is O(2^n) where n is input number
+     * @param n the number for which fibonacci is to be calculated
+     * @return the fibonacci sequence
+     */
+    public int fibonacci(int n) {
+        if  (n == 0) return 0;
+        if  (n == 1) return 1;
+
+        return fibonacci(n-1) + fibonacci(n-2);
     }
 
 
