@@ -8,3 +8,5 @@ Main
 Methods:        
 1.Minimum of an array         
 Return the smallest number in  the array         
+2.Average of an array                    
+Return average of an array                    
