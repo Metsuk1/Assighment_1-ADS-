@@ -37,6 +37,7 @@ public class MyApplication {
                 case 3 -> checkNumber();
                 case 4 -> Factorial();
                 case 5 -> fibonacciSequence();
+                case 6 -> power();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -148,6 +149,24 @@ public class MyApplication {
         System.out.println("the result is " + result);
         System.out.println("the duration is " + duration + " milliseconds");
 
+
+    }
+
+    private void power(){
+        System.out.println("enter the number: ");
+        int a = sc.nextInt();
+
+        System.out.println("enter the power: ");
+        int n = sc.nextInt();
+
+        double startTime = System.nanoTime();
+
+        //hold result
+        int result = task.power(a,n);
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+        System.out.println("The result is: " + result);
+        System.out.println("the duration is " + duration + " milliseconds");
 
     }
 

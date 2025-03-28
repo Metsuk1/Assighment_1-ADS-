@@ -91,4 +91,19 @@ public class Tasks_type {
     }
 
 
+    /**
+     * this method to computes a^n (a raised to the power of n).
+     *
+     * Time complexity is O(n) where n is input number
+     * @param a the number that will be raised to a power
+     * @param n power number
+     * @return power of a number
+     */
+    public int power(int a,int n){
+        if  (n == 0) return 1;
+
+        return a * power(a,n-1);
+    }
+
+
 }
