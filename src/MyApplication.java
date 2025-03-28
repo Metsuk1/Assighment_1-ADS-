@@ -35,7 +35,7 @@ public class MyApplication {
                 case 1 -> findMin();
                 case 2 -> findAverage();
                 case 3 -> checkNumber();
-
+                case 4 -> Factorial();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -111,6 +111,23 @@ public class MyApplication {
         double duration = (endTime - startTime) / 1000000; // convert to milliseconds
 
         System.out.println(res + " number");
+        System.out.println("the duration is " + duration + " milliseconds");
+
+    }
+
+    private void Factorial(){
+        // enter the number for calculating factorial
+        System.out.println("enter the number for calculating factorial");
+        int n = sc.nextInt();
+
+        double startTime = System.nanoTime();
+
+        //hold result
+        int result = task.factorial(n);
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+
+        System.out.println("factorial of  " + n   + "  is  " + result);
         System.out.println("the duration is " + duration + " milliseconds");
 
     }

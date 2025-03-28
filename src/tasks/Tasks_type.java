@@ -64,4 +64,18 @@ public class Tasks_type {
         return true;
     }
 
+    /**
+     * this method calculates the factorial of a given number
+     *time complexity is O(n) where n is th input number
+     *  recursive algorithm iterates through all numbers   from n to 1.
+     * @param n the number for which the factorial is to be calculated
+     * @return  The factorial of the given number
+     */
+    public static int factorial(int n) {
+        if( n == 0|| n == 1) return 1;
+
+        return n * factorial(n-1);
+    }
+
+
 }
