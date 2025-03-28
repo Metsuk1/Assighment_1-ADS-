@@ -3,7 +3,7 @@ import tasks.Tasks_type;
 import java.util.Scanner;
 
 public class MyApplication {
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
     private final  Tasks_type task;
 
     public MyApplication(Tasks_type tasksType) {
@@ -17,7 +17,7 @@ public class MyApplication {
             System.out.println("\n****************");
             System.out.println("Please choose one of the following tasks:");
             System.out.println("1.Find minimum in the array");
-            System.out.println("2.Find average in the array");
+            System.out.println("2.Compute average in the array");
             System.out.println("3.Check number IsPrime");
             System.out.println("4.Find factorial of number");
             System.out.println("5.Find Fibonacci sequence");
@@ -29,11 +29,21 @@ public class MyApplication {
             System.out.println("0.Exit");
 
             System.out.println("Enter your choice: ");
-            int option = scanner.nextInt();
+            int option = sc.nextInt();
 
             switch (option){
-                case 1: findMin();
+                case 1 -> findMin();
+                case 2 -> findAverage();
+
+
+                case 0 -> {
+                    System.out.println("Goodbye Bro!");
+                    return;
+                }
+
+                default -> System.out.println("\nInvalid choice");
             }
+
 
 
         }
@@ -43,13 +53,13 @@ public class MyApplication {
     private void findMin(){
         System.out.println("Enter the length of the array: ");
         // enter the length of array
-        int n = scanner.nextInt();
+        int n = sc.nextInt();
 
         int[] arr = new int[n];
 
         System.out.println("Enter the elements of the array: ");
         for (int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();
+            arr[i] = sc.nextInt();
         }
 
         int task_1 = task.findMinimum(arr);
@@ -57,6 +67,22 @@ public class MyApplication {
 
     }
 
+    private void findAverage(){
+        // enter the length of array
+        System.out.println("Enter the length of the array: ");
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        double task_2 = task.average(arr);
+        System.out.println("The average is " + task_2);
+
+    }
 
 
 
