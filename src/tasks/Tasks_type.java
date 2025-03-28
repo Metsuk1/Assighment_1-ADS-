@@ -106,4 +106,19 @@ public class Tasks_type {
     }
 
 
+    /**
+     * this method recursive to print an array in reverse order without using arrays explicitly.
+     *Time complexity is O(n) where n is input number
+     * @param n length of array
+     * print array in reverse order
+     */
+    public void reverse(int n) {
+        if  (n == 0) return;
+
+        int num = sc.nextInt();
+        reverse(n - 1);
+        System.out.println(num + " ");
+    }
+
+
 }

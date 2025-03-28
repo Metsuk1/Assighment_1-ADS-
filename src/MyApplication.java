@@ -38,6 +38,7 @@ public class MyApplication {
                 case 4 -> Factorial();
                 case 5 -> fibonacciSequence();
                 case 6 -> power();
+                case 7 -> reverseArray();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -168,6 +169,20 @@ public class MyApplication {
         System.out.println("The result is: " + result);
         System.out.println("the duration is " + duration + " milliseconds");
 
+    }
+
+    private void reverseArray(){
+        System.out.println("enter the number of length of array");
+        int n = sc.nextInt();
+
+
+        double startTime = System.nanoTime();
+
+        //hold result
+        task.reverse(n);
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+        System.out.println("the duration is " + duration + " milliseconds");
     }
 
 
