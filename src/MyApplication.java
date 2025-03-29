@@ -41,6 +41,7 @@ public class MyApplication {
                 case 7 -> reverseArray();
                 case 8 -> isDigit();
                 case 9 -> binomialCoefficient();
+                case 10 -> findGCD();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -221,6 +222,25 @@ public class MyApplication {
 
     }
 
+    private void findGCD(){
+        System.out.println("enter a number");
+        int a = sc.nextInt();
+
+        System.out.println("enter b number");
+        int b = sc.nextInt();
+
+        double startTime = System.nanoTime();
+
+// Compute gcd using Euclid's algorithm
+        int res = task.gcd(a, b);
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+
+        System.out.println("result is " + res);
+        System.out.println("the duration is " + duration + " milliseconds");
+
+    }
 
 
 }

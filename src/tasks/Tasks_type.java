@@ -155,4 +155,18 @@ public class Tasks_type {
         return res;
     }
 
+    /**
+     * this method find the GCD by using Euclidean Algorithm,recursive step: gcd(b, remainder of a/b)
+     * Time complexity is  O(log n).
+     * @param a number for compute GCD
+     * @param b number for compute GCD
+     * @return the GCD of two numbers
+     */
+    public static int gcd(int a, int b) {
+        if( b == 0) {
+            return a;// base case: If b becomes 0, return a as the GCD
+        }
+
+        return gcd(b, a % b);
+    }
 }
