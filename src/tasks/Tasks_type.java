@@ -120,5 +120,24 @@ public class Tasks_type {
         System.out.println(num + " ");
     }
 
+    /**
+     * Time compexity is O(n) where nn is the length of the string.
+     * Recursively checks if the string consists only of digits.
+     * @param str the input string
+     * @param start index the current position in the string
+     * @return true if the string consists only of digits, false otherwise
+     */
+    public boolean isDigit(String str, int start) {
+        //base case if we checked all characters return true
+        if (str.length() == start) {return true;}
+
+        // If the current character is not a digit, return false
+        if(!Character.isDigit(str.charAt(start))) {
+            return false;
+        }
+
+        return isDigit(str, start + 1);
+    }
+
 
 }

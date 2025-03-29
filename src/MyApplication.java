@@ -39,6 +39,7 @@ public class MyApplication {
                 case 5 -> fibonacciSequence();
                 case 6 -> power();
                 case 7 -> reverseArray();
+                case 8 -> isDigit();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -185,7 +186,21 @@ public class MyApplication {
         System.out.println("the duration is " + duration + " milliseconds");
     }
 
+    private void isDigit(){
+        System.out.println("Enter the string =");
+        sc.nextLine();
+        String str = sc.nextLine(); // reading the entire input string
 
+        double startTime = System.nanoTime();
+
+        //hold result
+        boolean result  = task.isDigit(str,0);
+        String res = (result ? "yes" : "no");
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+        System.out.println(res);
+        System.out.println("the duration is " + duration + " milliseconds");
+    }
 
 
 
