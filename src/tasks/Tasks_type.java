@@ -9,6 +9,7 @@ public class Tasks_type {
 
     /**
      * this method find the minimum element in the array
+     * Time complexity: O(n), where n is the size of the array.
      * @param arr accept array of integer
      * @return the minimum in the given array
      */
@@ -28,6 +29,7 @@ public class Tasks_type {
 
     /**
      * this method compute average in the array
+     * Time complexity: O(n), where n is the size of the array.
      * @param arr accept array of integer
      * @return  average  of the array
      */
