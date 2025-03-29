@@ -139,5 +139,20 @@ public class Tasks_type {
         return isDigit(str, start + 1);
     }
 
+    /**
+     * this method is Recursive function to compute the Binomial Coefficient
+     * time complexity O(2^n)
+     * @param n The total number of elements in the set.
+     * @param k The number of elements to choose.
+     * @return the binomial coefficient
+     */
+    public static int binomial(int n, int k) {
+        if ( k > n) return 0; // it is invalid case
+        if(n == k || k == 0) {return 1;} // here is base case
+
+        int res =  binomial(n - 1,k-1) + binomial(n-1,k) ;
+
+        return res;
+    }
 
 }

@@ -40,6 +40,7 @@ public class MyApplication {
                 case 6 -> power();
                 case 7 -> reverseArray();
                 case 8 -> isDigit();
+                case 9 -> binomialCoefficient();
                 case 0 -> {
                     System.out.println("Goodbye Bro!");
                     return;
@@ -200,6 +201,24 @@ public class MyApplication {
         double duration = (endTime - startTime) / 1000000; // convert to milliseconds
         System.out.println(res);
         System.out.println("the duration is " + duration + " milliseconds");
+    }
+
+    private void binomialCoefficient(){
+        System.out.println("enter n");
+        int n = sc.nextInt();
+        System.out.println("enter k");
+        int k = sc.nextInt();
+
+        double startTime = System.nanoTime();
+
+        int res = task.binomial(n, k);
+
+
+        double endTime = System.nanoTime();
+        double duration = (endTime - startTime) / 1000000; // convert to milliseconds
+        System.out.println("result is " + res);
+        System.out.println("the duration is " + duration + " milliseconds");
+
     }
 
 
